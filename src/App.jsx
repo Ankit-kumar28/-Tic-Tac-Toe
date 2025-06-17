@@ -82,10 +82,7 @@ function App() {
     <span className="text-green-400">{isXTurn ? "X" : "O"}</span>
   </p>
 )}
-
-
-
-      {/* Game Board */}
+      
       <div className="grid grid-cols-3 gap-3 mt-4">
         {board.map((value, index) => (
           <div
@@ -98,14 +95,13 @@ function App() {
         ))}
       </div>
 
-      {/* Winner Message - For extra spacing */}
+      
       {winner && (
         <p className="text-lg font-semibold text-yellow-300 mt-6 animate-bounce">
           🎊 Congratulations! {winner} wins!
         </p>
       )}
 
-      {/* Reset Button */}
       <div className="mt-6">
         <button
           onClick={resetGame}
